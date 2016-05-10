@@ -29,8 +29,10 @@ step 1: newColor ++
 	
 //use the newColor to color as many un-colored nodes as possible 
 Step 2: uncolorNode <-- get an uncolor node // check adjacentMatrix [i][i] == 0 
-	   if newNode does not have any adjacent node that are already colored with the newColor // check adjancyMatrix
-	   adjacentMatrix[uncolorNode][uncolorNode] <-- newColor
+
+if newNode does not have any adjacent node that are already colored with the newColor // check adjancyMatrix
+
+adjacentMatrix[uncolorNode][uncolorNode] <-- newColor
 
 Step 3: repeat step 2 until all uncolored nodes are checked.
 
