@@ -28,6 +28,7 @@ public:
         cout << "Number of Nodes: " << numNodes;
 
         loadMatrix(data);
+        out_data1 << "Initial Matrix:" << endl;
         printMatrix();
         colorGraph();
     }
@@ -50,9 +51,11 @@ public:
                 }
 
             }
-            //STEP 4:
-            printMatrix();
         }
+        //STEP 4:
+        out_data1 << "Number of colors used: " << newColor << endl;
+        out_data1 << "Final Matrix: " << endl;
+        printMatrix();
 
     }
 
@@ -97,12 +100,17 @@ public:
             adjacencyMatrix[i] = new int[numNodes]();
         }
 
+        out_data1 << "Input Pairs: " << endl;
+
         while (!data.eof()) {
             data >> row;
             data >> col;
+            out_data1 << "<" << row << ", " << col << "> ";
+            out_data1 << "<" << col << ", " << row << ">" << endl;
             adjacencyMatrix[row - 1][col - 1] = -1;
             adjacencyMatrix[col - 1][row - 1] = -1;
         }
+        out_data1 << endl;
     }
 };
 
